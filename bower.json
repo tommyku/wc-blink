@@ -1,0 +1,21 @@
+{
+    "name": "wc-blink",
+    "version": "0.1.0",
+    "authors": [
+      "Tommy Ku <ckku@outlook.com>"
+    ],
+    "description": "Custom element bringing back the notorious <blink>",
+    "license": "MIT",
+    "main": "wc-blink.html",
+    "keywords": [
+        "web-components",
+        "web-component"
+    ],
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "webcomponentsjs": "^0.7.0"
+    }
+}
