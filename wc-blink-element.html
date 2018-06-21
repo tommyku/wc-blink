@@ -1,15 +1,24 @@
-(async ()=> {
-  // might not be able to get wc-blink.html if not placed at root
-  const res = await fetch('./wc-blink.html');
-  const textTemplate = await res.text();
-  const HTMLTemplate = new DOMParser().parseFromString(textTemplate, 'text/html')
-    .querySelector('#wc-blink');
+<template id='wc-blink'>
+  <style>
+    /* Credit goes to google for this part
+       Search "html blink" on google and see */
+    @keyframes blink {80%{opacity:0.0}}
+    :host, * {
+      animation:blink 1s steps(1,end) 0s infinite;
+    }
+  </style>
+  <slot name='content'></slot>
+</template>
 
+<script type='text/javascript'>
   class WcBlink extends HTMLElement {
     constructor() {
       super();
 
-      const template = HTMLTemplate.content;
+      const template = document.currentScript
+        .ownerDocument
+        .getElementById('wc-blink')
+        .content;
 
       const shadowRoot = this.attachShadow({ mode: 'open' })
         .appendChild(template.cloneNode(true));
@@ -40,4 +49,4 @@
   }
 
   customElements.define('wc-blink', WcBlink);
-})();
+</script>
