@@ -11,13 +11,14 @@
 </template>
 
 <script type='text/javascript'>
+  // hack to get reference to this document even if calling constructors somewhere else
+  const thisDoc = document.currentScript.ownerDocument;
+
   class WcBlink extends HTMLElement {
     constructor() {
       super();
 
-      const template = document.currentScript
-        .ownerDocument
-        .getElementById('wc-blink')
+      const template = thisDoc.getElementById('wc-blink')
         .content;
 
       const shadowRoot = this.attachShadow({ mode: 'open' })
