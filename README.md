@@ -1,5 +1,9 @@
 # &lt;wc-blink&gt;
 
+## Demo
+
+Check out the demo at [https://tommyku.github.io/wc-blink/](https://tommyku.github.io/wc-blink/). It works like the once native `<blink>` element.
+
 ## Install
 
 [Download as ZIP](https://github.com/tommyku/wc-blink/archive/master.zip).
