@@ -2,29 +2,24 @@
 
 ## Install
 
-Install the component using [Bower](http://bower.io/):
+[Download as ZIP](https://github.com/tommyku/wc-blink/archive/master.zip).
 
-```sh
-$ bower install wc-blink --save
+or add as a git submodule
+
+``` bash
+$ mkdir modules && cd modules
+$ git submodule add https://github.com/tommyku/wc-blink
 ```
-
-Or [download as ZIP](https://github.com/tommyku/wc-blink/archive/master.zip).
 
 ## Usage
 
-1. Import polyfill:
+1. Import custom element:
 
     ```html
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="/modules/wc-blink/wc-blink-element.html">
     ```
 
-2. Import custom element:
-
-    ```html
-    <link rel="import" href="bower_components/wc-blink/wc-blink.html">
-    ```
-
-3. Start using it!
+2. Start using it anywhere in your code!
 
     ```html
     <wc-blink></wc-blink>
